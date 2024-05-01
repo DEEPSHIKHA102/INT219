@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggers list</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+  <form>
+        <h1>Find Bloggers Around the World</h1>
+        <label for="country">Select the country: </label>
+            <select name="country" id="country">
+                <option value="select">Select</option>
+                <optgroup label="India">
+                    <option value="Utter Pradesh">Utter Pradesh - Lucknow</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh - Shimla</option>
+                    <option value="Hariyana">Hariyana - Chandigarh</option>
+                    <option value="Gujrat">Gujrat - Ahmedabad</option>
+                    <option value="Bihar">Bihar - Patna</option>
+                </optgroup>
+                <optgroup label="Australia">
+                    <option value="New South Wales">New South Wales - Sydney</option>
+                    <option value="Queensland">Queensland - Brisbane</option>
+                    <option value="Victoria">Victoria - Melbourne</option>
+                    <option value="Western Australia">Western Australia - Perth</option>
+                    <option value="South Australia">South Australia - Adelaide</option>
+                </optgroup>
+                <optgroup label="United Kingdom">
+                    <option value="England">England - London</option>
+                    <option value="Scotland">Scotland - Edinburgh</option>
+                    <option value="Wales">Wales - Cardiff</option>
+                    <option value="Northern Ireland">Northern Ireland - Belfast</option>
+                </optgroup>
+                <optgroup label="Germany">
+                    <option value="Berlin">Berlin - Berlin</option>
+                    <option value="Hamburg">Hamburg - Hamburg</option>
+                    <option value="Munich">Munich - Munich</option>
+                    <option value="Cologne">Cologne - Cologne</option>
+                    <option value="Frankfurt">Frankfurt - Frankfurt</option>
+                </optgroup>
+                <optgroup label="Japan">
+                    <option value="Tokyo">Tokyo - Tokyo</option>
+                    <option value="Osaka">Osaka - Osaka</option>
+                    <option value="Kyoto">Kyoto - Kyoto</option>
+                    <option value="Hiroshima">Hiroshima - Hiroshima</option>
+                    <option value="Fukuoka">Fukuoka - Fukuoka</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <label for="location">Location: </label>
+            <input type="text" id="location" name="location" readonly>
+            <h1>Bloggers Details</h1>
+            <div id="bloggerDetails"></div>
+    </form>
+
+    <script>
+        document.getElementById('country').addEventListener('change', function() {
+            var locationInput = document.getElementById('location');
+            var bloggerDetails = document.getElementById('bloggerDetails');
+            var selectedOption = this.options[this.selectedIndex];
+            var country = selectedOption.parentNode.label;
+            var selectedLocation = selectedOption.value;
+
+            locationInput.value = selectedLocation;
+            bloggerDetails.innerHTML = ''; // Clear existing blogger details
+
+            var bloggers = {
+                "Utter Pradesh": [
+                    { name: 'Ravi Kumar', description: "Ravi Kumar Sihag's educational journey started in his village at Saraswati Vidya Mandir, where he completed his early schooling under the guidance of Manmohan Sir. Later, he moved to Anupgarh Sharda School and studied until the 11th grade. For his 12th grade, he attended 'New of Senior Secondary School' in Vijayanagar. ", link: "https://www.javatpoint.com/ravi-kumar-sihag#:~:text=Ravi%20Kumar%20Sihag's%20educational%20journey,Senior%20Secondary%20School%22%20in%20Vijayanagar." },
+                    { name: 'Priya Singh', description: "Priya Srivastava Coming from the ‘City of Nawabs’, Lucknow, Priya’s sole motto is to explore life through journeys to unexplored destinations and knitting travel stories. She believes in creating memories, eating like a local, talking to the natives, understanding their way of living and capturing their smile in her camera. Be it quaint little Himalayan villages, grand forts in Rajasthan or serene beaches in Goa or ancient temples in Varanasi, all the destinations have an untold saga, which she tries to unfold! All her journeys, new or old, are etched on the canvas of her heart like a beautiful painting. Experimenting new dishes and experiencing different cultures are some of the things she enjoys the most. It's through travelling that she derives inspiration. An ardent reader, cinema lover and a nascent photographer, she wishes to listen and discover the myriad colours and sounds of nature.", link: "https://timesofindia.indiatimes.com/travel/author/author-priya-srivastava-479240621.cms." }
+                ],
+                "Himachal Pradesh": [
+                    { name: 'Ankit Sharma', description: "Ankit Sharma, a native of Nirmand, Himachal Pradesh (India) is an IT Engineer by profession. A passionate traveller who strongly believes life is meant to be explored. His college days were more exciting, being a vocalist/lyricist for a metal band. However, his personality is rather soothing and he is a bit of a snob about keeping himself and things around him in order. Inspired by his unfathomable love for cinema, especially Thriller, he got inclined towards storytelling. Writing came naturally to him; He first began penning down songs, followed by short poems, quotes, and now novels.", link: "https://www.amazon.in/stores/author/B09MNPNV5Q/about" },
+                    { name: 'Deepika Patel', description: "Deepika Mehta lives at her mountain home on the outskirts of Shimla. She recently did a short hike in the surrounding hills and has penned down the experience. Nature writing is an art and Deepika in just a few words transports you to the hills. Deepika Mehta is first a nature lover, with a passion for the Himalayan region, and makes a living providing strategic communications to non-profit organizations.", link: "https://www.juniperopc.com/post/the-jungle-concert" }
+                ],
+                "Hariyana": [
+                    { name: 'Elvish Yadav', description: "Elvish Yadav (pronounced [ˈɛlvɪʃ jˈadav]; born 14 September 1997), earlier known as Siddharth Yadav, is an Indian YouTuber, streamer and singer from Wazirabad, a village located in Gurugram, India.[2] He is known for his YouTube videos and winning the second season of Bigg Boss OTT.Early life Yadav was born on 14 September 1997 as Siddharth Yadav to Ram Avtar Yadav and Sushma Yadav in a Hindu Yadav Yaduvanshi Ahir family from Haryana.[7][8] Yadav went to Amity International School, Gurgaon and later joined Hansraj College, Delhi, to complete his Bachelor of Commerce degree.", link: "www.youtube.com/@TheSocialFactory" },
+                    { name: 'Kirti Mehra', description: "Born on July 31, 1997, into a middle-class family in Delhi, Kirti began her educational journey at Vikas Bharatiya Public Delhi. Currently pursuing her graduation at Hansraj College, part of the University of Delhi, she manages to balance her academic pursuits with her thriving social media career.", link: "instagram.com/kirtimehra31?igshid=155z0fxe9p6hn" }
+                ],
+                "Gujrat": [
+                    { name: 'Harish Shah', description: "Harish Shah was a producer and director, known for Mere Jeevan Saathi (1972), Zalzala (1988) and Ab Insaf Hoga (1995). He died on July 7, 2020 in Mumbai, Maharashtra, India.", link: "https://www.youtube.com/results?search_query=Harish+Shah+Gujarat+travel+expert" },
+                    { name: 'Komal Patel', description: 'Gujarati cuisine lover', link: "" }
+                ],
+                "Bihar": [
+                    { name: 'Amit Kumar', description: "Amit kumar educational journey started in his village at Saraswati Vidya Mandir, where he completed his early schooling under the guidance of Manmohan Sir. Later, he moved to Anupgarh Sharda School and studied until the 11th grade. For his 12th grade, he attended 'New of Senior Secondary School' in Vijayanagar. ", link: "https://www.javatpoint.com/ravi-kumar-sihag#:~:text=Ravi%20Kumar%20Sihag's%20educational%20journey,Senior%20Secondary%20School%22%20in%20Vijayanagar." },
+                    { name: 'Neha Gupta', description: "Deepika Mehta lives at her mountain home on the outskirts of Shimla. She recently did a short hike in the surrounding hills and has penned down the experience. Nature writing is an art and Deepika in just a few words transports you to the hills. Deepika Mehta is first a nature lover, with a passion for the Himalayan region, and makes a living providing strategic communications to non-profit organizations.", link: "https://www.juniperopc.com/post/the-jungle-concert" }
+                ],
+                                // Define bloggers for other states and countries similarly
+            "New South Wales": [
+                    { name: 'Sarah Johnson', description: 'Sydney lifestyle blogger', link: '' },
+                    { name: 'Michael Brown', description: 'Brisbane adventure seeker', link: '' }
+                ],
+                "Queensland": [
+                    { name: 'Emily Wang', description: 'Queensland travel guide', link: '' },
+                    { name: 'Daniel Smith', description: 'Brisbane foodie', link: '' }
+                ],
+                "Victoria": [
+                    { name: 'Olivia Lee', description: 'Melbourne fashion blogger', link: '' },
+                    { name: 'Matthew Jones', description: 'Victoria photography enthusiast', link: '' }
+                ],
+                "Western Australia": [
+                    { name: 'Sophie Clark', description: 'Perth lifestyle blogger', link: '' },
+                    { name: 'David Wilson', description: 'Western Australia outdoor adventurer', link: '' }
+                ],
+                "South Australia": [
+                    { name: 'Liam Taylor', description: 'Adelaide arts and culture blogger', link: '' },
+                    { name: 'Emma White', description: 'South Australia nature lover', link: '' }
+                ],
+                // Define bloggers for the United Kingdom
+                "England": [
+        { name: "John Doe", bio: "Tech blogger", link: "https://www.youtube.com/watch?v=K1EJSdYnItU" },
+        { name: "Jane Smith", bio: "Food blogger", link: "https://www.youtube.com/watch?v=7MaFIOOcfnQ" },
+      ],
+      "Scotland": [
+        { name: "Mike Lee", bio: "Movie blogger", link: "https://www.youtube.com/watch?v=R3IpxBgdM7U" },
+        { name: "Sarah Jones", bio: "Travel blogger", link: "https://www.youtube.com/watch?v=2QmFMAtp-EM" },
+      ],
+      "Wales": [
+        { name: "Alice Brown", bio: "Fashion blogger", link: "https://www.youtube.com/watch?v=2_7gyaM3g-s" },
+        { name: "David Miller", bio: "Finance blogger", link: "https://www.youtube.com/watch?v=LyrqhruLhBA" }
+      ],
+      "Northern Ireland": [
+        { name: "Emily Garcia", bio: "Food blogger", link: "https://www.youtube.com/watch?v=Gs0CywtXDUc" },
+        { name: "Charles Johnson", bio: "Sports blogger", link: "https://www.youtube.com/watch?v=JKxICp3F_wo" },
+      ],
+
+                // Define bloggers for Germany
+                "Berlin": [
+                    { name: 'Takashi Yamada', description: 'Berlin lifestyle blogger', link: '' },
+                    { name: 'Yui Suzuki', description: 'Berlin fashion enthusiast', link: '' }
+                ],
+                "Hamburg": [
+                    { name: 'Haruka Sato', description: 'Hamburg travel blogger', link: '' },
+                    { name: 'Kenji Tanaka', description: 'Hamburg foodie', link: '' }
+                ],
+                "Munich": [
+                    { name: 'Aya Nakamura', description: 'Munich culture and arts enthusiast', link: '' },
+                    { name: 'Mia Schmidt', description: 'Munich beer aficionado', link: '' }
+                ],
+                "Cologne": [
+                    { name: 'Hiroshi Tanaka', description: 'Cologne history explorer', link: '' },
+                    { name: 'Sakura Yamamoto', description: 'Cologne lifestyle blogger', link: '' }
+                ],
+                "Frankfurt": [
+                    { name: 'Riko Watanabe', description: 'Frankfurt travel guide', link: '' },
+                    { name: 'Daiki Nakajima', description: 'Frankfurt foodie', link: '' }
+                ],
+                // Define bloggers for Japan
+                "Tokyo": [
+                    { name: 'Sachiko Suzuki', description: 'Tokyo fashion blogger', link: '' },
+                    { name: 'Ryota Tanaka', description: 'Tokyo food enthusiast', link: '' }
+                ],
+                "Osaka": [
+                    { name: 'Kazuki Sato', description: 'Osaka travel expert', link: '' },
+                    { name: 'Akari Yamamoto', description: 'Osaka nightlife enthusiast', link: '' }
+                ],
+                "Kyoto": [
+                    { name: 'Ayumi Nakamura', description: 'Kyoto culture and history blogger', link: '' },
+                    { name: 'Yuto Tanaka', description: 'Kyoto food lover', link: '' }
+                ],
+                "Hiroshima": [
+                    { name: 'Eriko Kobayashi', description: 'Hiroshima peace advocate', link: '' },
+                    { name: 'Takumi Suzuki', description: 'Hiroshima sightseeing expert', link: '' }
+                ],
+                "Fukuoka": [
+                    { name: 'Mitsuki Yamamoto', description: 'Fukuoka travel enthusiast', link: '' },
+                    { name: 'Sora Tanaka', description: 'Fukuoka food blogger', link: '' }
+                ]
+            };
+
+            // Display bloggers for selected location
+            bloggers[selectedLocation].forEach(function(blogger) {
+                var bloggerDetailsItem = document.createElement('div');
+                bloggerDetailsItem.innerHTML = '<h2><a href="' + blogger.link + '">' + blogger.name + '</a></h2><p>' + blogger.description + '</p>';
+                bloggerDetails.appendChild(bloggerDetailsItem);
+            });
+        });
+    </script>
+</body>
+</html>

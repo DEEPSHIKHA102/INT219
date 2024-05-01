@@ -1,0 +1,89 @@
+/* Reset default browser styles */
+body, h1, h2, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url("./brige.jpg");
+    background-size: cover;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+
+
+.contact-section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    resize: none;
+}
+
+.contact-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}

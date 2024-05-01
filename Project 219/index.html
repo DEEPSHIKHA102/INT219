@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/676eaf438a.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/v4-shims.min.js" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <!-- Aos Animation css cdn link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+    <title>Travel Blog app</title>
+</head>
+
+<body>
+    
+    <div class="main_section"> 
+
+        <!--Navbar & background image section-->
+        <div class="bg_img_section">
+            <!---nav section-->
+            <div class="nav_section">
+                <a href="./index.html" class="logo_link">
+                    Travel with heelshi<i class="fa-solid fa-vedio"></i>
+                </a>
+                <ul class="ul">
+                    <li><a href="./login.html" class="nav_link active">log in</a></li>
+                    <li><a href="./signup.html" class="nav_link">Signup</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./index.html" class="nav_link active">Home</a></li>
+                    <li><a href="about.html" class="nav_link">About US</a></li>
+                    <li><a href="destination.html" class="nav_link">Top Destinations</a></li>
+                    <li><a href="./view.html" class="nav_link">Blogs</a></li>
+                    <li><a href="contact.html" class="nav_link">Contact US</a></li>
+                   <li><a href="upload.html">Upload</a></li>
+                </ul>
+                <div id="toggleIcon">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>
+            <!--Hero Section -->
+            <div class="hero_section">
+                <div class="text_section">
+                    Let's Explore the World, <br> <span>Together</span>
+                </div>
+                <div class="btn_group">
+                    <button class="btn bg_btn">Explore More</button>
+                    <button class="btn border_btn">Destinations</button>
+                </div>
+            </div>
+        </div>
+
+       <!-- About Us Section-->
+       <div class="about_section">
+        <div class="image_section" data-aos="flip-left"  data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <img src="./nature.jpg" alt="About Image" class="about_img">
+        </div>
+        <div class="content_section" data-aos="flip-left"  data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="tag_section">
+                <h6 class="tag_title">About Us</h6>
+                <div class="tag_indicator">
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <h6 class="about_title">
+                We Travel to Explore the World !
+            </h6>
+            <p class="about-desc">
+                "Embark on a journey with 'Travel the
+                 Explorer,' where every voyage is an adventure waiting to unfold. With a passion for discovery and a commitment to excellence, we specialize in crafting unforgettable travel experiences that immerse you in the diverse cultures, 
+                 breathtaking landscapes, and hidden treasures of the world. 
+                 Whether you're seeking a thrilling expedition to remote corners of the globe, a luxurious retreat in exotic destinations, 
+                 or a soul-stirring cultural immersion, we have the expertise and resources to turn your dreams into reality. 
+                </p>
+                <button class="btn about_btn bg_btn">
+                    Know more <i class="fa-solid fa-arrow-right"></i>
+                </button>
+        </div>
+       </div>
+
+       <!-- Divider -->
+       <hr class="divider">
+
+       <!--Travel category Section-->
+
+       <div class="travel_categories_section">
+        <div class="tag_section tag_center">
+            <h6 class="tag_title">Our journey</h6>
+            <div class="tag_indicator">
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <h6 class="desc">We travelled the following travel categories</h6>
+        <div class="category_box_section">
+            <div class="category_box" data-aos="fade-left" data-aos-duration="2000">
+                <img src="./sunlight.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+            <div class="category_box" data-aos="fade-left" data-aos-duration="2000">
+                <img src="./aeroplane.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+            <div class="category_box" data-aos="fade-left" data-aos-duration="2000">
+                <img src="./boatwithman.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+            <div class="category_box" data-aos="fade-right" data-aos-duration="2000">
+                <img src="./brige.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+            <div class="category_box" data-aos="fade-right" data-aos-duration="2000">
+                <img src="./heartisland.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+            <div class="category_box" data-aos="fade-right" data-aos-duration="2000">
+                <img src="./ballon.jpg" alt="category Image" class="cat_img">
+                <div class="cat_title">Adventure</div>
+            </div>
+        </div>
+       </div>
+
+       <!---Join community-->
+       <div class="join_section">
+        <h6 class="join_title">
+            join Our Travel community <br> to Explore with Us.
+        </h6>
+        <button class="btn bg_btn journey_btn">
+            Join Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+       </div>
+
+       <!--Suggested popular destination section-->
+       <div class="popular_destination">
+        <div class="tag_section tag_center">
+            <h6 class="tag_title">Destinations</h6>
+            <div class="tag_indicator">
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <h6 class="desc">We suggest you to visit these popular destinations.</h6>
+        <div class="destination_section">
+            <div class="destination_box" data-aos="fade-right" data-aos-duration="2000">
+                <div class="destination_img_box">
+                    <img src="./aeroplane.jpg" alt="Destination Image" class="destination_img">
+                    <div class="destination_category">
+                        Jungle Safari
+                    </div>
+                    <div class="destination_deatil">
+                        <h6 class="destination_title">G-Tech Forest Resort Jungle</h6>
+                        <h6 class="destination_duration">12 days | (15th April - 30th April 2024)</h6>
+                        <div class="destination_popular_places">
+                            <div class="tag">River</div>
+                            <div class="tag">Nature</div>
+                            <div class="tag">Jungle</div><div class="tag">Mountain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination_box" data-aos="fade-down" data-aos-duration="2000">
+                <div class="destination_img_box">
+                    <img src="./ballon.jpg" alt="Destination Image" class="destination_img">
+                    <div class="destination_category">
+                        Adventure
+                    </div>
+                    <div class="destination_deatil">
+                        <h6 class="destination_title">G-Tech Forest Resort Jungle</h6>
+                        <h6 class="destination_duration">12 days | (15th April - 30th April 2024)</h6>
+                        <div class="destination_popular_places">
+                            <div class="tag">River</div>
+                            <div class="tag">Nature</div>
+                            <div class="tag">Jungle</div><div class="tag">Mountain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination_box" data-aos="fade-up" data-aos-duration="2000">
+                <div class="destination_img_box">
+                    <img src="./waterwithtree.jpg" alt="Destination Image" class="destination_img">
+                    <div class="destination_category">
+                        Art & Culture
+                    </div>
+                    <div class="destination_deatil">
+                        <h6 class="destination_title">G-Tech Forest Resort Jungle</h6>
+                        <h6 class="destination_duration">12 days | (15th April - 30th April 2024)</h6>
+                        <div class="destination_popular_places">
+                            <div class="tag">River</div>
+                            <div class="tag">Nature</div>
+                            <div class="tag">Jungle</div><div class="tag">Mountain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination_box" data-aos="fade-left" data-aos-duration="2000">
+                <div class="destination_img_box">
+                    <img src="./girlwithbag.jpg" alt="Destination Image" class="destination_img">
+                    <div class="destination_category">
+                        Hiking
+                    </div>
+                    <div class="destination_deatil">
+                        <h6 class="destination_title">G-Tech Forest Resort Jungle</h6>
+                        <h6 class="destination_duration">12 days | (15th April - 30th April 2024)</h6>
+                        <div class="destination_popular_places">
+                            <div class="tag">River</div>
+                            <div class="tag">Nature</div>
+                            <div class="tag">Jungle</div><div class="tag">Mountain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+       <!-- Divider -->
+       <hr class="divider">
+
+
+        <!--Latest Blod Section-->
+        <div class="blog_section">
+            <div class="tag_section tag_center">
+                <h6 class="tag_title">Our Blogs</h6>
+                <div class="tag_indicator">
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <h6 class="desc">Get Travel Guide & Experience via our Blogs.</h6>
+            <div class="blog_section_box">
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="./girlsit.jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="2000">
+                    <img src="./orangewater.jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="3000">
+                    <img src="./town (1).jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="./fogmountain.jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="2000">
+                    <img src="./indiagate.jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog_box" data-aos="zoom-in" data-aos-duration="3000">
+                    <img src="./jharna.jpg" alt="Blog Image" class="blog_img">
+                    <div class="blog_data">
+                        <p class="date">
+                            <i class="fa-solid fa-calendar-days"></i> &nbsp; 22 April, 2024
+                        </p>
+                        <h6 class="blog_title">Explore the Jungle Safari</h6>
+                        <div class="blog_desc">
+                            "Embark on a journey beyond the horizon with TravelLines, 
+                            where every destination tells a story and every path leads to adventure. 
+                            Our mission is to ignite the spirit of wanderlust within you and guide you...
+                        </div>
+                        <button class="read_btn">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <!--Contact Us section-->
+        <div class="contact_section">
+            <div class="tag_section tag_center">
+                <h6 class="tag_title">Get in Touch</h6>
+                <div class="tag_indicator">
+                    <div class="line"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <h6 class="desc">Feel free to ask, if you have any query.</h6>
+            <div class="contact_box_section">
+                <div class="map_section" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" 
+                        marginheight="0" marginwidth="0" 
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kannauj,%20Utter%20Pradesh+(Travel%20Website%20With%20heelshi)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                </div>
+                <div class="form_section" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                <form>
+                    <div class="input_group">
+                        <div class="input_box">
+                            <label for="firstname" class="label">Firstname</label>
+                            <input type="text" class="input" placeholder="Enter your firstname">
+                        </div>
+                        <div class="input_box">
+                            <label for="lastname" class="label">Lastname</label>
+                            <input type="text" class="input" placeholder="Enter your lastname">
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <div class="input_box">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" class="input" placeholder="Enter your email">
+                        </div>
+                        <div class="input_box">
+                            <label for="subject" class="label">Subject</label>
+                            <input type="text" class="input" placeholder="e.g. Web Development">
+                        </div>
+                    </div>
+                    <div class="message_box">
+                        <label for="project_desc" class="label">Project Description</label>
+                        <textarea name="project_desc" id="project_desc" cols="30" rows="6" 
+                        placeholder="Please Clearly provide your project description..."></textarea>
+                    </div>
+                    <button class="btn bg_btn submit_btn">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+
+    <!--Aos Animation js cdn link-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--Aos Initialization-->
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
